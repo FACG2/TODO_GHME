@@ -30,12 +30,23 @@ var todoFunctions = {
     // in the new todo array, all elements will remain unchanged except the one with id: idToMark
     // this element will have its done value toggled
     // hint: array.map
+
+    var new_array = todos.map(function(item){
+        var new_item = Object.assign({},item);
+      if(idToMark === new_item.id){
+        new_item.done = !new_item.done ;
+        }
+      return new_item;
+    });
+return new_array;
   },
   sortTodos: function(todos, sortFunction) {
     // stretch goal! Do this last
     // should leave the input arguement todos unchanged
     // sortFunction will have same signature as the sort function in array.sort
     // hint: array.slice, array.sort
+
+
   },
 };
 
