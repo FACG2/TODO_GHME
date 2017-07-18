@@ -30,7 +30,6 @@ var todoFunctions = {
     // in the new todo array, all elements will remain unchanged except the one with id: idToMark
     // this element will have its done value toggled
     // hint: array.map
-
     var new_array = todos.map(function(item){
         var new_item = Object.assign({},item);
       if(idToMark === new_item.id){
