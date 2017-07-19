@@ -16,7 +16,7 @@ var todoFunctions = {
   })(),
   addTodo: function(todos, newTodo) {
     //when adding an empty todo ,it will add nothing
-    if (newTodo.description === undefined)
+    if (newTodo.description.length < 2)
       return todos;
     //when ther is an id ,it's a Dummy statmen ,but to insure the logic
     if (newTodo.id !== undefined)
