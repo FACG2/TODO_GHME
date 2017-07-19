@@ -164,8 +164,8 @@ body{
   }
 
   .main-todo form input[type = "text"]{
-    padding: 12px 250px;
-		margin-left: -55px
+    padding:12px 415px 12px 0;
+		margin-left: -55px;
   }
 
   .main-todo form input[type = "submit"]{
@@ -223,7 +223,7 @@ body{
   {
     background: #CB7;
     height: 115px;
-    margin-top: 50px;
+    margin-top: 10px;
     box-shadow: 5px 5px 40px gray;
     width: 100%;
     margin-left: 0px;
