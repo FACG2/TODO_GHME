@@ -7,29 +7,35 @@
 
 body{
   margin: 0;
-
 }
 
 .container
 {
-  max-width: 1000px;
+  max-width: 1199px;
   margin:0 auto;
-  height: 200px;
 }
 .todo
 {
-  background: #448AFF;
-  height: 75px;
+	min-height: 100vh;
+
+  background: transparent;
+	background: grey;
+	background: -webkit-linear-gradient(#9d9e9d, #ecece9, #9d9e9d);
+	background: -o-linear-gradient(#9d9e9d, #ecece9, #9d9e9d);
+	background: -moz-linear-gradient(#9d9e9d, #ecece9, #9d9e9d);
+	background: linear-gradient(#E4E6B9, #f3f79e, #E4E6B9);
+	background-color: #E4E6B9;
 }
 .main-todo
 {
-  margin: 0 auto;
-  background: #448AFF;
-  box-shadow: 5px 5px 40px #448AFF;
+	text-align: center;
+  background: transparent;
+  box-shadow: 5px 5px 40px gray;
+	border-radius: 10px;
 }
 
 .main-todo form{
-    margin: 0px 150px;
+
     padding: 18px 0;
 }
 
@@ -38,25 +44,26 @@ body{
 }
 
 .main-todo form input[type = "submit"]{
-  padding:10px 50px;
-  background: #FF7043;
+  padding:13px 90px;
+  background: #d0bd72
 }
-.desc
+.todoNode
 {
-  background: #18FFFF;
+  background: #CB7;
   height: 115px;
   margin-top: 10px;
-  box-shadow: 5px 5px 40px #18FE13;
-  width: 70%;
-  margin-left: 150px;
+  box-shadow: 5px 5px 40px gray;
+  width: 85%;
+  margin-left: 70px;
+	border-radius: 10px;
+	position: relative;
 }
 
 
-.desc span
+.todoNode .todoNode_taskNumber
 {
-  width: 20px;
-  height: 20px;
-  border: 1px solid #E8EAF6;
+  width: 25px;
+  height: 25px;
   margin-left: 15px;
   margin-top: 15px;
   float: left;
@@ -64,70 +71,132 @@ body{
   color: #233186;
 
 }
-.desc img
+.todoNode img,
+.todoNode .btn-delete img
 {
   width: 30px;
   height: 30px;
   float: right;
 
 }
-.desc img[alt="pen"]{
+.todoNode  img[alt="pen"]{
   margin-right: 5px;
   margin-top: 5px;
+	width: 25px;
+	height: 25px;
 }
-.desc img[alt="trash"]{
-  margin-right: -30px;
-  margin-top: 85px;
+.todoNode .btn-delete img[alt="trash"]{
+
 
 }
 
-.desc button {
+.todoNode .btn-check {
   padding:1.3rem;
   float: right;
   border-radius: 50%;
-  margin-top:40px;
+  margin-top: 35px;
   background: #FF7043;
-  margin-right: 15px;
+  margin-right: 60px;
+	box-shadow: 2px 2px 5px gray;
+	border:none;
 }
 
-/* responsive for tablet*/
+.todoNode .btn-delete
+{
+	float: right;
+	width: 40px;
+	height: 40px;
+	background: transparent;
+	border:none;
+	margin: 75px -95px 0 0
+}
+.todoNode .description
+{
+	text-align: center;
+	display: block;
+	position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+		font-size: 18px;
+		font-weight: bold;
+}
+
+.btn-delete
+{
+	margin: 55px -95px 0 0
+}
+
+.item-checked{
+	background:#a59557;
+	    height: 115px;
+	    margin-top: 10px;
+	    box-shadow: 5px 5px 40px grey;
+	    width: 85%;
+	    margin-left: 70px;
+	    border-radius: 10px;
+}
+.btn-checked{
+	background-color: #883c24 !important;
+
+}
+.description_done{
+	text-decoration: line-through;
+}
+
+.main-todo ::after{
+	content: '';
+	display: block;
+	clear: both;
+}
+
+
+
+
 
 @media (max-width:1366px) {
 
-  .main-todo
-  {
-    margin: 0 auto;
-    background: #448AFF;
-    box-shadow: 5px 5px 40px #448AFF;
-  }
+
 
   .main-todo form{
-      margin: 0px 150px;
+
       padding: 18px 0;
   }
 
   .main-todo form input[type = "text"]{
-    padding: 10px 180px
+    padding: 12px 250px;
+		margin-left: -55px
   }
 
   .main-todo form input[type = "submit"]{
-    padding:10px 50px;
-    background: #FF7043;
+    padding:13px 90px;
+    background: #d0bd72
+		border:none;
+		box-shadow: 2px 2px 5px darkslategrey;
   }
 
 }
 
 
 @media (max-width:1105px) {
+	body{
+	  margin: 0;
+		background-image: url('images/Frozen.jpg');
+		background-size: cover;
+		background-repeat: no-repeat;
 
+	}
+	#todo-container{
+		padding: 0 15px;
+	}
   .container{
     width: 100%;
   }
   .main-todo
   {
     margin: 0 auto;
-    background: #448AFF;
-    box-shadow: 5px 5px 40px #448AFF;
+    background: transparent;
+    box-shadow: 5px 5px 40px gray;
   }
 
   .main-todo form{
@@ -136,7 +205,7 @@ body{
   }
 
   .main-todo form input[type = "text"]{
-    padding: 10px 0px;
+    padding: 12px 0px;
     float: left;
     margin-left: -10px;
     width: 65%;
@@ -144,77 +213,93 @@ body{
   }
 
   .main-todo form input[type = "submit"]{
-    padding:10px 0px;
-    background: #FF7043;
+    padding:13px 0px;
+    background: #d0bd72
     float: left;
     width: 30%;
   }
 
-  .desc
+  .todoNode
   {
-    background: #18FFFF;
+    background: #CB7;
     height: 115px;
     margin-top: 50px;
-    box-shadow: 5px 5px 40px #18FE13;
-    width: 70%;
-    margin-left: 150px;
+    box-shadow: 5px 5px 40px gray;
+    width: 100%;
+    margin-left: 0px;
   }
 
 }
 
 
 @media (max-width:835px) {
+	body{
+	  margin: 0;
+		background-image: url('images/Frozen.jpg');
+		background-size: cover;
+		background-repeat: no-repeat;
+
+	}
   .container{
     width: 100%;
   }
   .main-todo
   {
-    margin: 0 auto;
-    background: #448AFF;
-    box-shadow: 5px 5px 40px #448AFF;
+    margin: 0 5px;
+    background: transparent;
+    box-shadow: 5px 5px 40px gray;
   }
 
   .main-todo form{
       margin: 0 0 0 45px;
       padding: 18px 0;
+			position: relative;
   }
 
   .main-todo form input[type = "text"]{
-    padding: 10px 0px;
+    padding: 12px 0px;
     float: left;
-    margin-left: -25px;
-    width: 70%;
-    margin-right: 5px;
+    margin-left: -22px;
+    width: 100%;
+    margin-right: 0px;
   }
 
   .main-todo form input[type = "submit"]{
-    padding:10px 0px;
-    background: #FF7043;
+    padding:13px 0px;
+    background: #d0bd72
     float: left;
-    width: 30%;
+    width: 70px;
+		position: fixed;
+		bottom: 20px;
+		 border-radius: 50%;
+		 height: 70px;
+		 margin:-20px 0 0 -75px;
+		 z-index: 9999999;
   }
-  .desc
+  .todoNode
   {
-    background: #18FFFF;
-    height: 115px;
-    margin-top: 50px;
-    box-shadow: 5px 5px 40px #18FE13;
-    width: 93%;
-    margin-left: 18px;
+		background: #CB7;
+	    height: 115px;
+	    margin-top: 10px;
+	    box-shadow: 5px 5px 40px grey;
+	    width: 100%;
+	    margin-left: 0px;
   }
 
-}
+	.item-checked{
+		background:#a59557;
+		    height: 115px;
+		    margin-top: 10px;
+		    box-shadow: 5px 5px 40px grey;
+		    width: 100%;
+		    border-radius: 10px;
+	}
+	.btn-checked{
+		background-color: #883c24;
 
+	}
+	.description_done{
+		text-decoration: line-through;
+	}
 
-
-@media (max-width:535px){
-  .desc
-  {
-    background: #18FFFF;
-    height: 115px;
-    margin-top: 50px;
-    box-shadow: 5px 5px 40px #18FE13;
-    width: 91%;
-    margin-left: 20px;
-  }
 }

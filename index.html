@@ -1,30 +1,29 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <title>tdd todo</title>
-    <link rel="stylesheet" href="./style.css">
-  </head>
-  <body>
 
-    <section class="todo">
-      <div class="container">
-        <div class="main-todo">
-          <form>
-            <input type="text" name="description" value="">
-            <input type="submit" name="" value="Add Item">
-          </form>
-        </div>
-        <div class="desc">
-          <span>#1</span>
-          <img src="images/pen.png" alt="pen"/>
-          <img src="images/trash.png" alt="trash" />
-          <button></button>
+<head>
+  <meta charset="utf-8">
+  <title>tdd todo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="./style.css">
+</head>
 
-        </div>
-      </div>
-    </section>
-    <!-- <div id = "todo-container">
+<body>
+  <section class="todo">
+<div class="container">
+  <div class="main-todo">
+  <form id="add-todo">
+    <input type="text" name="description" value="" required>
+    <input type="submit" name="" value="Add Item">
+  </form>
+  </div>
+  <div id="todo-container">
+
+    </div>
+  </div>
+</div>
+</section>
+  <!-- <div id = "todo-container">
         <ul>
         </ul>
     </div>
@@ -32,7 +31,8 @@
       <input id= "des" required type="text" name="description" value="">
       <input type="submit" name="" value="Submit">
     </form> -->
-  </body>
-  <script type="text/javascript" src = "./logic.js"></script>
-  <script type="text/javascript" src = "./dom.js"></script>
+</body>
+<script type="text/javascript" src="./logic.js"></script>
+<script type="text/javascript" src="./dom.js"></script>
+
 </html>
