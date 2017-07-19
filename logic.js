@@ -64,9 +64,9 @@ var todoFunctions = {
 
   },
   editTodos: function functionName(todos, id, description) {
-    var new_array = todos.map(function(item) {
-      var new_item = Object.assign({}, item);
-      if (id === new_item.id) {
+    var new_array = todos.map(function(todo) {
+      var new_item = Object.assign({}, todo);
+      if (id == new_item.id) {
         new_item.description = description;
       }
       return new_item;

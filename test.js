@@ -53,7 +53,6 @@ test('Testing the addTodo Function, #scenario:2 when adding full todo ',function
   ] ;
 
 
-
   test.deepEqual(actual,expected,'should return the array with the add value' );
   test.end();
 });
@@ -167,25 +166,25 @@ test('Testing the markTodo returned array other item got changed or not ',functi
 //sortTodos testCases
 
 //editTodos testcases
-test('Testing the editTodos Function, #scenario:1 usual case editing a todo ',function(test){
-
-
-  var actual =logic.addTodo(toDoArray ,5 , 'make Coffee');
-
-  var expected =[
-    {id: 0, description: 'make tea', done: false},
-    {id: 1, description: 'make tea', done: true},
-    {id: 2, description: 'make tea', done: false},
-    {id: 3, description: 'make tea', done: true},
-    {id:4, description: 'make tea', done: false},
-    {id: 5, description: 'make Coffee', done: true},
-    {id: 6, description: 'make tea', done: true},
-    {id: 7, description: 'make tea', done: false},
-
-  ] ;
-
-
-
-  test.deepEqual(actual,expected,'should return the same array without adding a thing' );
-  test.end();
-});
+// test('Testing the editTodos Function, #scenario:1 usual case editing a todo ',function(test){
+//
+//
+//   var actual =logic.addTodo(toDoArray ,5 , 'make Coffee');
+//
+//   var expected =[
+//     {id: 0, description: 'make tea', done: false},
+//     {id: 1, description: 'make tea', done: true},
+//     {id: 2, description: 'make tea', done: false},
+//     {id: 3, description: 'make tea', done: true},
+//     {id:4, description: 'make tea', done: false},
+//     {id: 5, description: 'make Coffee', done: true},
+//     {id: 6, description: 'make tea', done: true},
+//     {id: 7, description: 'make tea', done: false},
+//
+//   ] ;
+//
+//
+//
+//   test.deepEqual(actual,expected,'should return the same array with editing the Description of todo:5' );
+//   test.end();
+// });
