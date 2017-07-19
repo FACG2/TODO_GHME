@@ -4,21 +4,24 @@
 (function() {
   // This is the dom node where we will keep our todo
   var container = document.getElementById('todo-container');
+  var completed= document.getElementById('hana');
   var addTodoForm = document.getElementById('add-todo');
 
-  var state =[{
+  var state =
+   [
+     {
       id: -3,
-      description: 'first todo',
+      description: 'Learn javascript',
       state: false,
     },
     {
       id: -2,
-      description: 'second todo',
+      description: 'Watching A Movie',
       state: true,
     },
     {
       id: -1,
-      description: 'third todo',
+      description: 'Shopping',
       state: false,
     },
   ]; // this is our initial todoList
@@ -26,7 +29,15 @@
   // This function takes a todo, it returns the DOM node representing that todo
   var createTodoNode = function(todo) {
     var todoNode = document.createElement('li');
-todoNode.innerHTML = "<span class='description-span'>" + todo.description +"   state:"+ todo.state+"</span>";
+
+  if(todo.state){
+    todoNode.innerHTML = "<span class='description-span' style='text-decoration: line-through;'>" + todo.description +"</span>";
+
+  }else{
+    todoNode.innerHTML = "<span class='description-span'>" + todo.description +"</span>";
+
+  }
+
 
     // you will need to use addEventListener
 
@@ -45,8 +56,11 @@ todoNode.innerHTML = "<span class='description-span'>" + todo.description +"   s
     var markButtonNode = document.createElement('button');
     markButtonNode.textContent = "Done";
     markButtonNode.addEventListener('click', function(event) {
+      console.log("newState",state);
       var newState = todoFunctions.markTodo(state, todo.id);
+
       update(newState);
+
     });
     todoNode.appendChild(markButtonNode);
     // add classes for css
@@ -83,14 +97,21 @@ var desctext=event.target;
 
   // you do not need to change this function
   var renderState = function(state) {
+    console.log("state",state.length);
     var todoListNode = document.createElement('ul');
+      todoListNode.setAttribute("id", "todoListNode");
+      console.log("state");
+      if(state.length!=0){
+        state.forEach(function(todo) {
+          todoListNode.appendChild(createTodoNode(todo));
 
-    state.forEach(function(todo) {
-      todoListNode.appendChild(createTodoNode(todo));
-    });
 
-    // you may want to add a class for css
-    container.replaceChild(todoListNode, container.firstChild);
+          container.replaceChild(todoListNode, container.firstChild);
+        });
+
+      }else{
+        document.getElementById("todoListNode").innerHTML=null;
+      }
   };
 
   if (container) renderState(state);

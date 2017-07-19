@@ -38,8 +38,8 @@ var todoFunctions = {
     // should leave the input argument todos unchanged
     // return a new array, this should not contain any todo with an id of idToDelete
     // hint: array.filter
-
     function isid(to) {
+      console.log("Filter",to);
       return to.id != idToDelete;
     }
     var newtodoo = todos.filter(isid);
