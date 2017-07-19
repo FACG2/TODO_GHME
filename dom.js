@@ -25,33 +25,48 @@
 
   // This function takes a todo, it returns the DOM node representing that todo
   var createTodoNode = function(todo) {
-    var todoNode = document.createElement('li');
-todoNode.innerHTML = "<span class='description-span'>" + todo.description +"   state:"+ todo.done+"</span>";
+    var divsection = document.querySelector("main-todo");
+    var todoNode = document.createElement('div');
+    todoNode.className="desc";
+    //adding the node elements
 
-    // you will need to use addEventListener
+    //adding the task number span
+    var taskNumberSpan = document.createElement('span');
+    taskNumberSpan.textContent = '#'+todo.id;
+    todoNode.appendChild(taskNumberSpan);
 
+    //adding the description
+    var descriptinSpan = document.createElement('span');
+    descriptinSpan.className="description";
+    descriptinSpan.textContent = todo.description;
+    todoNode.appendChild(descriptinSpan);
 
-    // add span holding description
-
-    // this adds the delete button
-    var deleteButtonNode = document.createElement('button');
-    deleteButtonNode.textContent = "Delete";
-    deleteButtonNode.addEventListener('click', function(event) {
-      var newState = todoFunctions.deleteTodo(state, todo.id);
-      update(newState);
-
-    });
-    todoNode.appendChild(deleteButtonNode);
-
-    // add markTodo button
-    var markButtonNode = document.createElement('button');
-    markButtonNode.textContent = "Done";
-    markButtonNode.addEventListener('click', function(event) {
+    //adding checked button
+    var checkButton = document.createElement('button');
+    checkButton.className=".btn-check";
+    checkButton.addEventListener('click', function(event) {
       var newState = todoFunctions.markTodo(state, todo.id);
       update(newState);
     });
-    todoNode.appendChild(markButtonNode);
-    // add classes for css
+    todoNode.appendChild(checkButton);
+
+    //adding the EditButton
+    var editButton = document.createElement('button');
+    editButton.className=".btn-edit";
+    editButton.addEventListener('click', function(event) {
+      var newState = todoFunctions.editTodos(state, todo.id ,todo.description);
+      update(newState);
+    });
+    todoNode.appendChild(editButton);
+
+    //adding the deleteButton
+    var deleteButton = document.createElement('button');
+    deleteButton.className=".btn-delete";
+    deleteButton.addEventListener('click', function(event) {
+      var newState = todoFunctions.deleteTodo(state, todo.id );
+      update(newState);
+    });
+    todoNode.appendChild(deleteButton);
 
     return todoNode;
   };
