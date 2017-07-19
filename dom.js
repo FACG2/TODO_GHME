@@ -6,33 +6,35 @@
   var container = document.getElementById('todo-container');
   var addTodoForm = document.getElementById('add-todo');
 
-  var state = [{
+  var state =[{
       id: -3,
-      description: 'first todo'
+      description: 'first todo',
+      state: false,
     },
     {
       id: -2,
-      description: 'second todo'
+      description: 'second todo',
+      state: true,
     },
     {
       id: -1,
-      description: 'third todo'
+      description: 'third todo',
+      state: false,
     },
   ]; // this is our initial todoList
 
   // This function takes a todo, it returns the DOM node representing that todo
   var createTodoNode = function(todo) {
     var todoNode = document.createElement('li');
-  todoNode.addEventListener('submit', function(event) {
+todoNode.innerHTML = "<span class='description-span'>" + todo.description +"   state:"+ todo.state+"</span>";
 
-
-      });
     // you will need to use addEventListener
 
     // add span holding description
 
     // this adds the delete button
     var deleteButtonNode = document.createElement('button');
+    deleteButtonNode.textContent = "Delete";
     deleteButtonNode.addEventListener('click', function(event) {
       var newState = todoFunctions.deleteTodo(state, todo.id);
       update(newState);
@@ -40,7 +42,13 @@
     todoNode.appendChild(deleteButtonNode);
 
     // add markTodo button
-
+    var markButtonNode = document.createElement('button');
+    markButtonNode.textContent = "Done";
+    markButtonNode.addEventListener('click', function(event) {
+      var newState = todoFunctions.markTodo(state, todo.id);
+      update(newState);
+    });
+    todoNode.appendChild(markButtonNode);
     // add classes for css
 
     return todoNode;
@@ -52,12 +60,18 @@
       // https://developer.mozilla.org/en-US/docs/Web/Events/submit
       // what does event.preventDefault do?
       // what is inside event.target?
+var desctext=event.target;
+      var description = desctext.firstElementChild.value;// event.target ....
+      event.preventDefault();
+    var newState = todoFunctions.addTodo(state, {description: description});
+    function sortFunction(a, b) {
 
-      var description = document.getElementById("des").value; // event.target ....
-    var newState = todoFunctions.deleteTodo(state, description);
+      return (b.id) - (a.id);
+    }
+    var newsort=todoFunctions.sortTodos(newState, sortFunction)
       // hint: todoFunctions.addTodo
     //  var newState = []; // ?? change this!
-      update(newState);
+      update(newsort);
     });
   }
 

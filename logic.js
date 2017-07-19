@@ -70,7 +70,7 @@ var todoFunctions = {
       return newtod;
     });
   },
-  sortTodos: function(todos, sortFunction, sort2) {
+  sortTodos: function(todos, sortFunction) {
     // stretch goal! Do this last
     // should leave the input arguement todos unchanged
     // sortFunction will have same signature as the sort function in array.sort
