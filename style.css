@@ -7,29 +7,34 @@
 
 body{
   margin: 0;
+	background-image: url('images/Frozen.jpg');
+	background-size: cover;
+	background-repeat: no-repeat;
 
 }
 
 .container
 {
-  max-width: 1000px;
+  max-width: 1199px;
   margin:0 auto;
   height: 200px;
 }
 .todo
 {
-  background: #448AFF;
-  height: 75px;
+  background: transparent;
+  height: 80px;
+
 }
 .main-todo
 {
-  margin: 0 auto;
-  background: #448AFF;
-  box-shadow: 5px 5px 40px #448AFF;
+	text-align: center;
+  background: transparent;
+  box-shadow: 5px 5px 40px gray;
+	border-radius: 10px;
 }
 
 .main-todo form{
-    margin: 0px 150px;
+
     padding: 18px 0;
 }
 
@@ -38,17 +43,18 @@ body{
 }
 
 .main-todo form input[type = "submit"]{
-  padding:10px 50px;
+  padding:13px 90px;
   background: #FF7043;
 }
 .desc
 {
-  background: #18FFFF;
+  background: ##CB7;
   height: 115px;
   margin-top: 10px;
-  box-shadow: 5px 5px 40px #18FE13;
-  width: 70%;
-  margin-left: 150px;
+  box-shadow: 5px 5px 40px gray;
+  width: 85%;
+  margin-left: 70px;
+	border-radius: 10px;
 }
 
 
@@ -64,69 +70,96 @@ body{
   color: #233186;
 
 }
-.desc img
+.desc .btn1 img,
+.desc .btn2 img
 {
   width: 30px;
   height: 30px;
   float: right;
 
 }
-.desc img[alt="pen"]{
+.desc .btn1 img[alt="pen"]{
   margin-right: 5px;
   margin-top: 5px;
+	width: 25px;
+	height: 25px;
 }
-.desc img[alt="trash"]{
-  margin-right: -30px;
-  margin-top: 85px;
+.desc .btn2 img[alt="trash"]{
+
 
 }
 
-.desc button {
+.desc .btn {
   padding:1.3rem;
   float: right;
   border-radius: 50%;
-  margin-top:40px;
+  margin-top: 35px;
   background: #FF7043;
-  margin-right: 15px;
+  margin-right: 20px;
+	box-shadow: 2px 2px 5px gray;
+	border:none;
 }
 
-/* responsive for tablet*/
+.btn1,.btn2
+{
+	float: right;
+	width: 40px;
+	height: 40px;
+	background: transparent;
+	border:none;
+}
+
+.btn2
+{
+	margin: 75px -39px 0 0px
+}
+
+.btn1{
+	margin: 0 ;
+}
+
+
+
 
 @media (max-width:1366px) {
 
-  .main-todo
-  {
-    margin: 0 auto;
-    background: #448AFF;
-    box-shadow: 5px 5px 40px #448AFF;
-  }
+
 
   .main-todo form{
-      margin: 0px 150px;
+
       padding: 18px 0;
   }
 
   .main-todo form input[type = "text"]{
-    padding: 10px 180px
+    padding: 12px 250px;
+		margin-left: -55px
   }
 
   .main-todo form input[type = "submit"]{
-    padding:10px 50px;
+    padding:13px 90px;
     background: #FF7043;
+		border:none;
+		box-shadow: 2px 2px 5px darkslategrey;
   }
 
 }
 
 
 @media (max-width:1105px) {
+	body{
+	  margin: 0;
+		background-image: url('images/Frozen.jpg');
+		background-size: cover;
+		background-repeat: no-repeat;
 
+	}
   .container{
     width: 100%;
   }
   .main-todo
   {
     margin: 0 auto;
-    background: #448AFF;
+    background: transparent;
     box-shadow: 5px 5px 40px #448AFF;
   }
 
@@ -136,7 +169,7 @@ body{
   }
 
   .main-todo form input[type = "text"]{
-    padding: 10px 0px;
+    padding: 12px 0px;
     float: left;
     margin-left: -10px;
     width: 65%;
@@ -144,7 +177,7 @@ body{
   }
 
   .main-todo form input[type = "submit"]{
-    padding:10px 0px;
+    padding:13px 0px;
     background: #FF7043;
     float: left;
     width: 30%;
@@ -155,52 +188,66 @@ body{
     background: #18FFFF;
     height: 115px;
     margin-top: 50px;
-    box-shadow: 5px 5px 40px #18FE13;
-    width: 70%;
-    margin-left: 150px;
+    box-shadow: 5px 5px 40px gray;
+    width: 100%;
+    margin-left: 0px;
   }
 
 }
 
 
 @media (max-width:835px) {
+	body{
+	  margin: 0;
+		background-image: url('images/Frozen.jpg');
+		background-size: cover;
+		background-repeat: no-repeat;
+
+	}
   .container{
     width: 100%;
   }
   .main-todo
   {
-    margin: 0 auto;
-    background: #448AFF;
+    margin: 0 5px;
+    background: transparent;
     box-shadow: 5px 5px 40px #448AFF;
   }
 
   .main-todo form{
       margin: 0 0 0 45px;
       padding: 18px 0;
+			position: relative;
   }
 
   .main-todo form input[type = "text"]{
-    padding: 10px 0px;
+    padding: 12px 0px;
     float: left;
-    margin-left: -25px;
-    width: 70%;
-    margin-right: 5px;
+    margin-left: -22px;
+    width: 100%;
+    margin-right: 0px;
   }
 
   .main-todo form input[type = "submit"]{
-    padding:10px 0px;
+    padding:13px 0px;
     background: #FF7043;
     float: left;
-    width: 30%;
+    width: 70px;
+		position: absolute;
+		top: 550px;
+		 border-radius: 50%;
+		 height: 70px;
+		 margin:-20px 0 0 -75px;
+
   }
   .desc
   {
     background: #18FFFF;
     height: 115px;
     margin-top: 50px;
-    box-shadow: 5px 5px 40px #18FE13;
-    width: 93%;
-    margin-left: 18px;
+    box-shadow: 5px 5px 40px gray;
+    width: 100%;
+    margin-left: 0px;
   }
 
 }
@@ -208,13 +255,20 @@ body{
 
 
 @media (max-width:535px){
+	body{
+	  margin: 0;
+		background-image: url('images/Frozen.jpg');
+		background-size: cover;
+		background-repeat: no-repeat;
+
+	}
   .desc
   {
     background: #18FFFF;
     height: 115px;
     margin-top: 50px;
-    box-shadow: 5px 5px 40px #18FE13;
-    width: 91%;
-    margin-left: 20px;
+    box-shadow: 5px 5px 40px gray;
+    width: 100%;
+    margin-left: 0px;
   }
 }
