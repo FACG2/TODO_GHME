@@ -7,6 +7,9 @@
 
 body{
   margin: 0;
+	background-image: url('images/Frozen.jpg');
+	background-size: cover;
+	background-repeat: no-repeat;
 
 }
 
@@ -18,15 +21,16 @@ body{
 }
 .todo
 {
-  background: #448AFF;
+  background: transparent;
   height: 80px;
 
 }
 .main-todo
 {
 	text-align: center;
-  background: #448AFF;
-  box-shadow: 5px 5px 40px #448AFF;
+  background: transparent;
+  box-shadow: 5px 5px 40px gray;
+	border-radius: 10px;
 }
 
 .main-todo form{
@@ -44,12 +48,13 @@ body{
 }
 .desc
 {
-  background: #18FFFF;
+  background: ##CB7;
   height: 115px;
   margin-top: 10px;
   box-shadow: 5px 5px 40px gray;
   width: 85%;
   margin-left: 70px;
+	border-radius: 10px;
 }
 
 
@@ -141,14 +146,20 @@ body{
 
 
 @media (max-width:1105px) {
+	body{
+	  margin: 0;
+		background-image: url('images/Frozen.jpg');
+		background-size: cover;
+		background-repeat: no-repeat;
 
+	}
   .container{
     width: 100%;
   }
   .main-todo
   {
     margin: 0 auto;
-    background: #448AFF;
+    background: transparent;
     box-shadow: 5px 5px 40px #448AFF;
   }
 
@@ -186,13 +197,20 @@ body{
 
 
 @media (max-width:835px) {
+	body{
+	  margin: 0;
+		background-image: url('images/Frozen.jpg');
+		background-size: cover;
+		background-repeat: no-repeat;
+
+	}
   .container{
     width: 100%;
   }
   .main-todo
   {
     margin: 0 5px;
-    background: #448AFF;
+    background: transparent;
     box-shadow: 5px 5px 40px #448AFF;
   }
 
@@ -237,6 +255,13 @@ body{
 
 
 @media (max-width:535px){
+	body{
+	  margin: 0;
+		background-image: url('images/Frozen.jpg');
+		background-size: cover;
+		background-repeat: no-repeat;
+
+	}
   .desc
   {
     background: #18FFFF;
