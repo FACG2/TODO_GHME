@@ -51,7 +51,7 @@ body{
 {
   background: #CB7;
   height: 115px;
-  margin-top: 10px;
+  margin-top: 15px;
   box-shadow: 5px 5px 40px gray;
   width: 85%;
   margin-left: 70px;
@@ -68,7 +68,9 @@ body{
   margin-top: 15px;
   float: left;
   text-align: center;
-  color: #233186;
+	color: #97853d;
+  font-size: -webkit-xxx-large;
+  margin: 26px 0 0 18px;
 
 }
 .todoNode img,
@@ -91,14 +93,14 @@ body{
 }
 
 .todoNode .btn-check {
-  padding:1.3rem;
-  float: right;
-  border-radius: 50%;
-  margin-top: 35px;
-  background: #FF7043;
-  margin-right: 60px;
-	box-shadow: 2px 2px 5px gray;
-	border:none;
+	padding: 1.7rem;
+    float: right;
+    border-radius: 50%;
+    margin-top: 28px;
+    background: #FF7043;
+    margin-right: 60px;
+    box-shadow: 2px 2px 5px grey;
+    border: none;
 }
 
 .todoNode .btn-delete
@@ -118,8 +120,8 @@ body{
     left: 50%;
     top: 50%;
     transform: translate(-50%,-50%);
-		font-size: 18px;
-		font-weight: bold;
+		font-size: 30px;
+    color: #44423a;
 }
 
 .btn-delete
@@ -223,11 +225,19 @@ body{
   {
     background: #CB7;
     height: 115px;
-    margin-top: 50px;
+    margin-top: 15px;
     box-shadow: 5px 5px 40px gray;
     width: 100%;
     margin-left: 0px;
   }
+	.item-checked {
+    background: #a59557;
+    height: 115px;
+    margin-top: 15px;
+    box-shadow: 5px 5px 40px grey;
+    width: 100%;
+    border-radius: 10px;
+}
 
 }
 
@@ -280,7 +290,7 @@ body{
   {
 		background: #CB7;
 	    height: 115px;
-	    margin-top: 10px;
+	    margin-top: 15px;
 	    box-shadow: 5px 5px 40px grey;
 	    width: 100%;
 	    margin-left: 0px;

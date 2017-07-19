@@ -39,7 +39,13 @@
     checkButton.classList.add("btn-checked");
     checkButton.addEventListener('click', function(event) {
       var newState = todoFunctions.markTodo(state, todo.id);
-      update(newState);
+      //the sort the array
+
+      var newSortedArray=todoFunctions.sortTodos(newState ,function(a,b) {
+        return  a.done - b.done;
+      });
+
+      update(newSortedArray);
     });
     todoNode.appendChild(checkButton);
 
