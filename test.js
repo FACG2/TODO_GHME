@@ -16,7 +16,7 @@ var toDoArray=[
 test('Testing the addTodo Function, #scenario:1 when adding just the description in a todo item',function(test){
 
 
-  var actual =logic.addTodo(toDoArray ,  { description: 'Sty home sss'} );
+  var actual = logic.addTodo(toDoArray ,  { description: 'Sty home sss'} );
 
   var expected =[
     {id: 0, description: 'make tea', done: false},

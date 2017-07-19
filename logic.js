@@ -30,6 +30,9 @@ var todoFunctions = {
     });
 
   },
+
+
+
   deleteTodo: function(todos, idToDelete) {
     // should leave the input argument todos unchanged
     // return a new array, this should not contain any todo with an id of idToDelete
@@ -73,6 +76,7 @@ var todoFunctions = {
     });
     return new_array;
   },
+
 };
 // Why is this if statement necessary?
 // The answer has something to do with needing to run code both in the browser and in Node.js
