@@ -6,16 +6,25 @@
   var container = document.getElementById('todo-container');
   var addTodoForm = document.getElementById('add-todo');
 
-  var state = [
-    { id: -3, description: 'first todo' },
-    { id: -2, description: 'second todo' },
-    { id: -1, description: 'third todo' },
+  var state = [{
+      id: -3,
+      description: 'first todo'
+    },
+    {
+      id: -2,
+      description: 'second todo'
+    },
+    {
+      id: -1,
+      description: 'third todo'
+    },
   ]; // this is our initial todoList
 
   // This function takes a todo, it returns the DOM node representing that todo
   var createTodoNode = function(todo) {
     var todoNode = document.createElement('li');
     // you will need to use addEventListener
+
 
     // add span holding description
 
@@ -24,6 +33,7 @@
     deleteButtonNode.addEventListener('click', function(event) {
       var newState = todoFunctions.deleteTodo(state, todo.id);
       update(newState);
+
     });
     todoNode.appendChild(deleteButtonNode);
 
@@ -55,6 +65,8 @@
     renderState(state);
   };
 
+
+
   // you do not need to change this function
   var renderState = function(state) {
     var todoListNode = document.createElement('ul');
@@ -62,6 +74,7 @@
     state.forEach(function(todo) {
       todoListNode.appendChild(createTodoNode(todo));
     });
+
 
     // you may want to add a class for css
     container.replaceChild(todoListNode, container.firstChild);

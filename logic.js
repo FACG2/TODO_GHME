@@ -15,41 +15,65 @@ var todoFunctions = {
     return incrementCounter;
   })(),
   addTodo: function(todos, newTodo) {
-    // should leave the input argument todos unchanged
-    // returns a new array, it should contain todos with the newTodo added to the end.
-    // add an id to the newTodo. You can use the generateId function to create an id.
-    // hint: array.concat
+    //when adding an empty todo ,it will add nothing
+    if (newTodo.description === undefined)
+      return todos;
+    //when ther is an id ,it's a Dummy statmen ,but to insure the logic
+    if (newTodo.id !== undefined)
+      return todos.concat(newTodo);
+
+    //this is the usual flow when adding a todo that has only the description
+    return todos.concat({
+      id: todos.length,
+      description: newTodo.description,
+      done: false
+    });
+
   },
   deleteTodo: function(todos, idToDelete) {
     // should leave the input argument todos unchanged
     // return a new array, this should not contain any todo with an id of idToDelete
     // hint: array.filter
+    var new_array = todos.filter(function(obj) {
+      return obj.id !== idToDelete;
+    })
+
+    return new_array;
   },
   markTodo: function(todos, idToMark) {
     // should leave the input argument todos unchanged
     // in the new todo array, all elements will remain unchanged except the one with id: idToMark
     // this element will have its done value toggled
     // hint: array.map
-    var new_array = todos.map(function(item){
-        var new_item = Object.assign({},item);
-      if(idToMark === new_item.id){
-        new_item.done = !new_item.done ;
-        }
+    var new_array = todos.map(function(item) {
+      var new_item = Object.assign({}, item);
+      if (idToMark === new_item.id) {
+        new_item.done = !new_item.done;
+      }
       return new_item;
     });
-return new_array;
+    return new_array;
   },
   sortTodos: function(todos, sortFunction) {
     // stretch goal! Do this last
     // should leave the input arguement todos unchanged
     // sortFunction will have same signature as the sort function in array.sort
     // hint: array.slice, array.sort
-
+    var newArray = todos.slice(0);
+    return newArray.sort(sortFunction);
 
   },
+  editTodos: function functionName(todos, id, description) {
+    var new_array = todos.map(function(todo) {
+      var new_item = Object.assign({}, todo);
+      if (id == new_item.id) {
+        new_item.description = description;
+      }
+      return new_item;
+    });
+    return new_array;
+  },
 };
-
-
 // Why is this if statement necessary?
 // The answer has something to do with needing to run code both in the browser and in Node.js
 // See this article for more details:

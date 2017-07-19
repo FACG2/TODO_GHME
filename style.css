@@ -1,0 +1,220 @@
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+
+body{
+  margin: 0;
+
+}
+
+.container
+{
+  max-width: 1000px;
+  margin:0 auto;
+  height: 200px;
+}
+.todo
+{
+  background: #448AFF;
+  height: 75px;
+}
+.main-todo
+{
+  margin: 0 auto;
+  background: #448AFF;
+  box-shadow: 5px 5px 40px #448AFF;
+}
+
+.main-todo form{
+    margin: 0px 150px;
+    padding: 18px 0;
+}
+
+.main-todo form input[type = "text"]{
+  padding: 10px 180px
+}
+
+.main-todo form input[type = "submit"]{
+  padding:10px 50px;
+  background: #FF7043;
+}
+.desc
+{
+  background: #18FFFF;
+  height: 115px;
+  margin-top: 10px;
+  box-shadow: 5px 5px 40px #18FE13;
+  width: 70%;
+  margin-left: 150px;
+}
+
+
+.desc span
+{
+  width: 20px;
+  height: 20px;
+  border: 1px solid #E8EAF6;
+  margin-left: 15px;
+  margin-top: 15px;
+  float: left;
+  text-align: center;
+  color: #233186;
+
+}
+.desc img
+{
+  width: 30px;
+  height: 30px;
+  float: right;
+
+}
+.desc img[alt="pen"]{
+  margin-right: 5px;
+  margin-top: 5px;
+}
+.desc img[alt="trash"]{
+  margin-right: -30px;
+  margin-top: 85px;
+
+}
+
+.desc button {
+  padding:1.3rem;
+  float: right;
+  border-radius: 50%;
+  margin-top:40px;
+  background: #FF7043;
+  margin-right: 15px;
+}
+
+/* responsive for tablet*/
+
+@media (max-width:1366px) {
+
+  .main-todo
+  {
+    margin: 0 auto;
+    background: #448AFF;
+    box-shadow: 5px 5px 40px #448AFF;
+  }
+
+  .main-todo form{
+      margin: 0px 150px;
+      padding: 18px 0;
+  }
+
+  .main-todo form input[type = "text"]{
+    padding: 10px 180px
+  }
+
+  .main-todo form input[type = "submit"]{
+    padding:10px 50px;
+    background: #FF7043;
+  }
+
+}
+
+
+@media (max-width:1105px) {
+
+  .container{
+    width: 100%;
+  }
+  .main-todo
+  {
+    margin: 0 auto;
+    background: #448AFF;
+    box-shadow: 5px 5px 40px #448AFF;
+  }
+
+  .main-todo form{
+      margin: 0 0 0 60px;
+      padding: 18px 0;
+  }
+
+  .main-todo form input[type = "text"]{
+    padding: 10px 0px;
+    float: left;
+    margin-left: -10px;
+    width: 65%;
+    margin-right: 5px;
+  }
+
+  .main-todo form input[type = "submit"]{
+    padding:10px 0px;
+    background: #FF7043;
+    float: left;
+    width: 30%;
+  }
+
+  .desc
+  {
+    background: #18FFFF;
+    height: 115px;
+    margin-top: 50px;
+    box-shadow: 5px 5px 40px #18FE13;
+    width: 70%;
+    margin-left: 150px;
+  }
+
+}
+
+
+@media (max-width:835px) {
+  .container{
+    width: 100%;
+  }
+  .main-todo
+  {
+    margin: 0 auto;
+    background: #448AFF;
+    box-shadow: 5px 5px 40px #448AFF;
+  }
+
+  .main-todo form{
+      margin: 0 0 0 45px;
+      padding: 18px 0;
+  }
+
+  .main-todo form input[type = "text"]{
+    padding: 10px 0px;
+    float: left;
+    margin-left: -25px;
+    width: 70%;
+    margin-right: 5px;
+  }
+
+  .main-todo form input[type = "submit"]{
+    padding:10px 0px;
+    background: #FF7043;
+    float: left;
+    width: 30%;
+  }
+  .desc
+  {
+    background: #18FFFF;
+    height: 115px;
+    margin-top: 50px;
+    box-shadow: 5px 5px 40px #18FE13;
+    width: 93%;
+    margin-left: 18px;
+  }
+
+}
+
+
+
+@media (max-width:535px){
+  .desc
+  {
+    background: #18FFFF;
+    height: 115px;
+    margin-top: 50px;
+    box-shadow: 5px 5px 40px #18FE13;
+    width: 91%;
+    margin-left: 20px;
+  }
+}
