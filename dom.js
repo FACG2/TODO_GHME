@@ -6,15 +6,27 @@
   var container = document.getElementById('todo-container');
   var addTodoForm = document.getElementById('add-todo');
 
-  var state = [
-    { id: -3, description: 'first todo' },
-    { id: -2, description: 'second todo' },
-    { id: -1, description: 'third todo' },
+  var state = [{
+      id: -3,
+      description: 'first todo'
+    },
+    {
+      id: -2,
+      description: 'second todo'
+    },
+    {
+      id: -1,
+      description: 'third todo'
+    },
   ]; // this is our initial todoList
 
   // This function takes a todo, it returns the DOM node representing that todo
   var createTodoNode = function(todo) {
     var todoNode = document.createElement('li');
+  todoNode.addEventListener('submit', function(event) {
+
+
+      });
     // you will need to use addEventListener
 
     // add span holding description
@@ -41,10 +53,10 @@
       // what does event.preventDefault do?
       // what is inside event.target?
 
-      var description = '?'; // event.target ....
-
+      var description = document.getElementById("des").value; // event.target ....
+    var newState = todoFunctions.deleteTodo(state, description);
       // hint: todoFunctions.addTodo
-      var newState = []; // ?? change this!
+    //  var newState = []; // ?? change this!
       update(newState);
     });
   }
