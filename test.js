@@ -79,8 +79,6 @@ test('Testing the addTodo Function, #scenario:3 when adding an empty todo',funct
   test.end();
 });
 
-
-
 //deleteTodo function test cases
 test('Testing the deleteTodo Function,#scenario:1 the usual deleting a todo from the todos',function(test) {
   var actual=logic.deleteTodo(toDoArray , 3);
@@ -120,9 +118,6 @@ test('Testing the deleteTodo Function,#scenario:3 deleting a todo from an empty 
    test.deepEqual(actual,expected,'Nothing gonna happen,');
    test.end();
 });
-
-
-
 
 //markTodo function test cases
 test('Testing the markTodo Function ',function(test){
