@@ -40,12 +40,17 @@ body{
 }
 
 .main-todo form input[type = "text"]{
-  padding: 10px 180px
+  padding: 10px 180px;
+	color: #44423a;
+	font-weight: bold;
+	border-radius: 10px;
 }
 
 .main-todo form input[type = "submit"]{
   padding:13px 90px;
-  background: #d0bd72
+  background: #d0bd72;
+	text-indent: 5px;
+	border-radius: 10px;
 }
 .todoNode
 {
@@ -57,6 +62,8 @@ body{
   margin-left: 70px;
 	border-radius: 10px;
 	position: relative;
+	overflow: hidden;
+	min-height: 200px;
 }
 
 
@@ -87,10 +94,7 @@ body{
 	width: 25px;
 	height: 25px;
 }
-.todoNode .btn-delete img[alt="trash"]{
 
-
-}
 
 .todoNode .btn-check {
 	padding: 1.7rem;
@@ -122,6 +126,8 @@ body{
     transform: translate(-50%,-50%);
 		font-size: 30px;
     color: #44423a;
+		width: 60%;
+		word-wrap: break-word;
 }
 
 .btn-delete
@@ -164,17 +170,46 @@ body{
 
       padding: 18px 0;
   }
-
+	.todoNode
+	{
+	  background: #CB7;
+	  height: 115px;
+	  margin-top: 15px;
+	  box-shadow: 5px 5px 40px gray;
+	  width: 85%;
+	  margin-left: 70px;
+		border-radius: 10px;
+		position: relative;
+		overflow: hidden;
+		min-height: 200px;
+	}
   .main-todo form input[type = "text"]{
-    padding: 12px 250px;
-		margin-left: -55px
+    padding:12px 0 12px 5px;
+		margin-left: -55px;
+		width: 600px;
+		border-radius: 10px;
   }
+
+	.todoNode .description
+	{
+		text-align: center;
+		display: block;
+		position: absolute;
+	    left: 50%;
+	    top: 50%;
+	    transform: translate(-50%,-50%);
+			font-size: 30px;
+	    color: #44423a;
+			width: 60%;
+			word-wrap: break-word;
+	}
 
   .main-todo form input[type = "submit"]{
     padding:13px 90px;
     background: #d0bd72
 		border:none;
 		box-shadow: 2px 2px 5px darkslategrey;
+		border-radius: 10px;
   }
 
 }
@@ -207,28 +242,32 @@ body{
   }
 
   .main-todo form input[type = "text"]{
-    padding: 12px 0px;
+    padding: 12px 0 14px 5px;
     float: left;
     margin-left: -10px;
     width: 65%;
     margin-right: 5px;
+		border-radius: 10px;
   }
 
   .main-todo form input[type = "submit"]{
     padding:13px 0px;
     background: #d0bd72
     float: left;
-    width: 30%;
+    width: 34%;
+		border-radius: 10px;
   }
 
   .todoNode
   {
     background: #CB7;
     height: 115px;
-    margin-top: 15px;
+    margin-top: 10px;
     box-shadow: 5px 5px 40px gray;
     width: 100%;
     margin-left: 0px;
+		overflow: hidden;
+		min-height: 200px;
   }
 	.item-checked {
     background: #a59557;
@@ -237,6 +276,19 @@ body{
     box-shadow: 5px 5px 40px grey;
     width: 100%;
     border-radius: 10px;
+}
+.todoNode .description
+{
+	text-align: center;
+	display: block;
+	position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+		font-size: 30px;
+    color: #44423a;
+		width: 60%;
+		word-wrap: break-word;
 }
 
 }
@@ -267,7 +319,7 @@ body{
   }
 
   .main-todo form input[type = "text"]{
-    padding: 12px 0px;
+    padding: 12px 5px;
     float: left;
     margin-left: -22px;
     width: 100%;
@@ -285,15 +337,18 @@ body{
 		 height: 70px;
 		 margin:-20px 0 0 -75px;
 		 z-index: 9999999;
+		 border:none
   }
   .todoNode
   {
 		background: #CB7;
 	    height: 115px;
-	    margin-top: 15px;
+	    margin-top: 10px;
 	    box-shadow: 5px 5px 40px grey;
 	    width: 100%;
 	    margin-left: 0px;
+			min-height: 200px;
+			overflow: hidden;
   }
 
 	.item-checked{
@@ -312,4 +367,51 @@ body{
 		text-decoration: line-through;
 	}
 
+.todoNode .description{
+	text-align: center;
+    display: block;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    font-size: 25px;
+    color: #44423a;
+		width: 60%;
+		word-wrap: break-word;
+}
+
+.todoNode .btn-check {
+    padding: 1.5rem;
+    float: right;
+    border-radius: 50%;
+    margin-top: 5px;
+    background: #FF7043;
+    margin-right: 5px;
+    box-shadow: 2px 2px 5px grey;
+    border: none;
+		position: fixed;
+		right: 30px;
+}
+.todoNode .btn-delete {
+    float: right;
+    width: 40px;
+    height: 40px;
+    background: transparent;
+    border: none;
+    margin: 160px -60px 0 0;
+		position: fixed;
+		right: 90px;
+	}
+	.todoNode .todoNode_taskNumber {
+    width: 25px;
+    height: 25px;
+    margin-left: -11px;
+    margin-top: 15px;
+    float: left;
+    text-align: center;
+    color: #97853d;
+    font-size: -webkit-xxx-large;
+    margin: -5px 0 0 5px;
+		position: fixed;
+}
 }
