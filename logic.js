@@ -18,7 +18,7 @@ var todoFunctions = {
     //when adding an empty todo ,it will add nothing
     console.log(IsValid(newTodo.description));
 
-    if (IsValid(newTodo.description) ||  todos.length > 24)
+    if (newTodo.description === undefined || IsValid(newTodo.description) ||  todos.length > 24)
       return todos;
     else{
     //when ther is an id ,it's a Dummy statmen ,but to insure the logic
