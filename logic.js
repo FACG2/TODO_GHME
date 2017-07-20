@@ -25,7 +25,7 @@ var todoFunctions = {
 
     //this is the usual flow when adding a todo that has only the description
     return todos.concat({
-      id: todos.length++,
+      id: todos.length,
       description: newTodo.description,
       done: false
     });
