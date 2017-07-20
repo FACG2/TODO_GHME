@@ -16,15 +16,12 @@ var todoFunctions = {
   })(),
   addTodo: function(todos, newTodo) {
     //when adding an empty todo ,it will add nothing
+    console.log(IsValid(newTodo.description));
 
-    if (newTodo.description.length < 1 || newTodo.description.length > 100 || newTodo.id > 25 ){
+    if (IsValid(newTodo.description) ||  todos.length > 25)
       return todos;
-      console.log('length:',newTodo.description.length);
-      console.log(newTodo.id > 20);
-    }
+    else{
     //when ther is an id ,it's a Dummy statmen ,but to insure the logic
-    if (newTodo.id !== undefined)
-      return todos.concat(newTodo);
 
     //this is the usual flow when adding a todo that has only the description
     return todos.concat({
@@ -32,6 +29,12 @@ var todoFunctions = {
       description: newTodo.description,
       done: false
     });
+      }
+    function IsValid(text) {
+      if(text.trim().length === 0 )
+      return true;
+
+    }
 
   },
 

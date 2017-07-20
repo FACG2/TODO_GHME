@@ -83,6 +83,7 @@ imageTrash.alt="Delete Me ";
       // what is inside event.target?
     var desctext=event.target;
       var description = desctext.firstElementChild.value;// event.target ....
+
       event.preventDefault();
 
     var newState = todoFunctions.addTodo(state, {description: description});
