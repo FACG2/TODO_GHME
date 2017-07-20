@@ -19,7 +19,9 @@ padding-bottom: 15px;*/
   max-width: 400px;
   width: 100%;
   margin: 0 auto;
-
+  -webkit-box-shadow: 14px 17px 12px -8px rgba(189,183,189,1);
+  -moz-box-shadow: 14px 17px 12px -8px rgba(189,183,189,1);
+  box-shadow: 14px 17px 12px -8px rgba(189,183,189,1);
 }
 
 
