@@ -45,7 +45,7 @@
 
     // this adds the delete button
     var deleteButtonNode = document.createElement('button');
-    deleteButtonNode.textContent = "Delete";
+    deleteButtonNode.innerHTML="<i class='fa fa-trash-o' aria-hidden='true' ></i>";
     deleteButtonNode.addEventListener('click', function(event) {
       var newState = todoFunctions.deleteTodo(state, todo.id);
       update(newState);
@@ -54,7 +54,7 @@
 
     // add markTodo button
     var markButtonNode = document.createElement('button');
-    markButtonNode.textContent = "Done";
+    markButtonNode.innerHTML = "<i class='fa fa-check-square-o' aria-hidden='true'></i>";
     markButtonNode.addEventListener('click', function(event) {
       console.log("newState",state);
       var newState = todoFunctions.markTodo(state, todo.id);
